@@ -22,10 +22,11 @@ sh createSSC.sh
 9) navigate to server using https://localhost:PORT
 
 If for some reason you need to the rootCA trusted by your local machine:
-ubuntu: 
+
+	ubuntu: 
 	- Copy your CA rootCA.pem /usr/local/share/ca-certificates/ then, update CA store:  sudo update-ca-certificates
 
-mac: 
+	mac: 
 	- Open Keychain Access and import the rootCA.pem to your System keychain. Then mark the certificate as trusted.
 
 sources:
