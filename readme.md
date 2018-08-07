@@ -1,15 +1,18 @@
-This repo was designed to assist developers on how to run your development server on HTTPS.
+# This repo was designed to assist developers on how to run your development server on HTTPS.
 The createSSC.sh contains step by step comments on exactly how the below certificates are created.
 Once all steps have been followed, all files except for server.key and server.cert can be discarded if desired.
 
-Steps for creating and using your own Certificate Authority and Server Certificate for HTTPS server development:
+# Steps for creating and using your own Certificate Authority and Server Certificate for local HTTPS server development:
 
 Note: Default configurations for root and server keys require passwords for the purpose of disallowing others to create CAs/certs without your consent. To remove the password requirement, remove the flag "-des3" from createRootKey.sh and createServerKey.sh. respectively.
 
 1) git clone repository
 2) replace the variables in rootCA.cnf to reflect the information you want shown in your Certificate Authority
 3) replace the variables in server.csr.cnf to reflect the information you want shown in your Server Certificate
-4) run 'sh createSSC.sh' in terminal
+4) run sel-signed certificate script in terminal: 
+```
+sh createSSC.sh
+```
 5) follow terminal prompts
 6) relocate newly created server.key & server.cert, passphrase into HTTPS server config
 7) start server
